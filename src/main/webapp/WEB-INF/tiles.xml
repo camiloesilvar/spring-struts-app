@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="general.definition" template="/WEB-INF/tiles/general/general_template.jsp">
+        <put-attribute name="header" value="/WEB-INF/tiles/general/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/tiles/general/menu.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/general/footer.jsp" />
+        <put-attribute name="framework" value="" />
+        <put-attribute name="body" value="" />
+    </definition>
+</tiles-definitions>
