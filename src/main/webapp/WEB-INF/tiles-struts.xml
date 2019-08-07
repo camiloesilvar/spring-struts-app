@@ -11,7 +11,7 @@
     </definition>
     
     <definition name="/tiles/struts/straction/getaction" extends="struts.definition">
-        <put-attribute name="body" value="/WEB-INF/jsp/struts_page.jsp" />
+        <put-attribute name="body" value="/WEB-INF/jsp/struts_tile_page.jsp" />
     </definition>
 
 </tiles-definitions>

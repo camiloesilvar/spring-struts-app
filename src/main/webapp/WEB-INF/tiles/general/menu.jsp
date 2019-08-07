@@ -6,7 +6,10 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link" href="${contextPath}/strutsapp/strutsaction/tile/getTileAction.action">struts</a>
+    <a class="nav-link" href="${contextPath}/strutsapp/strutsaction/tile/getAction.action">struts (no Tiles)</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="${contextPath}/strutsapp/strutsaction/tile/getTileAction.action">struts (Tiles)</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="${contextPath}/app/springapp/springaction/tile/getTileAction">spring</a>
