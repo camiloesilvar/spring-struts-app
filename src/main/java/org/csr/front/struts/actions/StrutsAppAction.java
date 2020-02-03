@@ -2,7 +2,8 @@ package org.csr.front.struts.actions;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
@@ -24,7 +25,7 @@ public class StrutsAppAction extends ActionSupport {
     public static final String GET_ACTION = "GET_ACTION";
     public static final String GET_TILE_ACTION = "GET_TILE_ACTION";
 
-    static Logger log = Logger.getLogger(StrutsAppAction.class);
+    static Logger logger = LogManager.getLogger(StrutsAppAction.class);
 
     @Action(value = "getTileAction")
     public String getTileAction() {

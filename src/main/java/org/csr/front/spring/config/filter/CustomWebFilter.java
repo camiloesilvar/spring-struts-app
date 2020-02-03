@@ -7,23 +7,26 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.MDC;
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.ThreadContext;
 import org.springframework.web.filter.GenericFilterBean;
 
 public class CustomWebFilter extends GenericFilterBean {
 
-    private Logger LOGGER = Logger.getLogger(CustomWebFilter.class);
+    private Logger logger = LogManager.getLogger(CustomWebFilter.class);
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
         throws IOException, ServletException {
-        MDC.put("ID", "12345");
+        ThreadContext.put("ID", "12345");
     }
 
     @Override
     public void destroy() {
-        LOGGER.debug("Seek and destroy!!!!!");
+    	logger.debug("Seek and destroy!!!!!");
     }
 
 }
