@@ -9,6 +9,7 @@
     <properties>
         <org.apache.struts.version>2.5.20</org.apache.struts.version>
         <org.springframework.version>4.3.23.RELEASE</org.springframework.version>
+        <org.springframework.security.version>4.2.12.RELEASE</org.springframework.security.version>
         <org.hibernate.version>5.2.18.Final</org.hibernate.version>
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
     </properties>
@@ -43,6 +44,7 @@
             <artifactId>taglibs-standard-impl</artifactId>
             <version>1.2.5</version>
         </dependency>
+        
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -56,6 +58,23 @@
             <version>${org.springframework.version}</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${org.springframework.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${org.springframework.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${org.springframework.security.version}</version>
+        </dependency>
+
+        <!-- Struts -->
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts2-core</artifactId>
