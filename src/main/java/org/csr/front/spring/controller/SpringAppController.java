@@ -5,6 +5,8 @@ import javax.validation.Valid;
 
 import org.csr.front.beans.FormulaireBean;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,7 +27,21 @@ public class SpringAppController {
     }
 
     @RequestMapping(value = { "/postformulaire" }, method = RequestMethod.POST)
-    public String add(@Valid @ModelAttribute("formulaire") FormulaireBean formulaire) {
+    public String add(@Valid @ModelAttribute("formulaire") FormulaireBean formulaire, BindingResult result, ModelMap model) {
+    	model.addAttribute("name", formulaire.getName());
+        model.addAttribute("contactNumber", formulaire.getContactNumber());
+        model.addAttribute("id", formulaire.getId());
         return "/tiles/spring/spraction/addaction";
+    }
+    
+    @RequestMapping(value = { "/sessionInvalidate" }, method = RequestMethod.GET)
+    public String sessionInvalidate(HttpServletRequest request) {
+    	request.getSession().invalidate();
+    	return "redirect:" + request.getHeader("Referer");
+    }
+    
+    @RequestMapping(value = { "/fragment" }, method = RequestMethod.GET)
+    public String fragment() {
+    	return "/fragment";
     }
 }

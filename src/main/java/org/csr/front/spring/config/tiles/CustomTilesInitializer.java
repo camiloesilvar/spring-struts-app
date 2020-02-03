@@ -5,7 +5,6 @@ import javax.servlet.ServletContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.tiles.StrutsTilesInitializer;
-import org.apache.struts2.tiles.StrutsWildcardServletApplicationContext;
 import org.apache.tiles.definition.DefinitionsFactory;
 import org.apache.tiles.factory.AbstractTilesContainerFactory;
 import org.apache.tiles.request.ApplicationContext;
@@ -24,7 +23,7 @@ public class CustomTilesInitializer extends AbstractTilesInitializer {
             return new ServletApplicationContext(servletContext);
         } else {
             LOG.trace("Initializing Tiles wildcard support ...");
-            return new StrutsWildcardServletApplicationContext(servletContext);
+            return new CustomStrutsWildcardServletApplicationContext(servletContext);
         }
     }
 

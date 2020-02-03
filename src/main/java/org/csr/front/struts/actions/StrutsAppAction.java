@@ -41,4 +41,9 @@ public class StrutsAppAction extends ActionSupport {
     public String getAction() {
         return GET_ACTION;
     }
+    
+    @Action(value = "invalidateSession")
+    public String invalidateSession() {
+        return GET_ACTION;
+    }
 }
