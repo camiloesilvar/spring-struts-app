@@ -18,6 +18,9 @@
 - formulario
 http://localhost:[port]/[context]/app/springapp/springaction/tile/homeformulaireAction
 
+##Hibernate
+https://www.baeldung.com/hibernate-5-spring
 
-# Todos
+
+# Todo's
 - Configuracion de hibernate 5.2

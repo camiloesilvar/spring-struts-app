@@ -22,6 +22,7 @@ public class WebInitializer implements WebApplicationInitializer {
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
         ctx.register(WebMvcConfig.class);
+        ctx.scan("org.csr.front.spring.config.data");
 
         /* Listeners */
         servletContext.addListener(new ContextLoaderListener(ctx));
