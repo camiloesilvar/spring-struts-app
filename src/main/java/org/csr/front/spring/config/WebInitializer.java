@@ -7,8 +7,10 @@ import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
+import javax.servlet.SessionTrackingMode;
 
 import org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter;
+import org.csr.front.spring.config.filter.SessionFilter;
 import org.csr.front.spring.config.tiles.CustomTilesListener;
 import org.csr.front.spring.config.web.WebMvcConfig;
 import org.springframework.web.WebApplicationInitializer;
@@ -20,6 +22,7 @@ public class WebInitializer implements WebApplicationInitializer {
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
+    	servletContext.setSessionTrackingModes(EnumSet.of(SessionTrackingMode.COOKIE));
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
         ctx.register(WebMvcConfig.class);
 
@@ -35,13 +38,18 @@ public class WebInitializer implements WebApplicationInitializer {
         strutsFilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.FORWARD, DispatcherType.REQUEST), false,
             "*.action");
         strutsFilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.ERROR), false, "/erreur/*");
+        
+        servletContext.addFilter("SessionFilter", new SessionFilter())
+        .addMappingForUrlPatterns(null, false, "*.action", "/app/*");
 
         /* Servlets */
         // Spring MVC sous le url /app/*
-        ServletRegistration.Dynamic servletSpringMvc =
+        ServletRegistration.Dynamic registration =
             servletContext.addServlet("spring-mvc", new DispatcherServlet(ctx));
-        servletSpringMvc.setLoadOnStartup(1);
-        servletSpringMvc.addMapping("/app/*");
+        registration.setLoadOnStartup(1);
+        registration.addMapping("/app/*");
+        
+        registration.setInitParameter("throwExceptionIfNoHandlerFound", "true");
     }
 
 }

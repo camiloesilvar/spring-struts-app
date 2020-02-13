@@ -56,7 +56,7 @@ public class SpringMvcMigrationFilter implements Filter {
             this.localeResolver = WebApplicationContextUtils.getWebApplicationContext(filterConfig.getServletContext())
                 .getBean(DispatcherServlet.LOCALE_RESOLVER_BEAN_NAME, LocaleResolver.class);
         } catch (NoSuchBeanDefinitionException ex) {
-            LOGGER.error("Aucun bean Spring de type LocaleResolver n'a Ã©tÃ© dÃ©fini avec le nom '"
+            LOGGER.error("Aucun bean Spring de type LocaleResolver n'a été défini avec le nom '"
                 + DispatcherServlet.LOCALE_RESOLVER_BEAN_NAME + "'");
 
             throw ex;
