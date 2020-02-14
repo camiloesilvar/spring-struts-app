@@ -1,4 +1,4 @@
-package org.csr.front.spring.config.tiles;
+package org.csr.spst.config.tiles;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

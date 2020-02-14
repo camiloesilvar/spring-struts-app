@@ -1,4 +1,4 @@
-package org.csr.front.spring.config.web;
+package org.csr.spst.config.web;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -15,7 +15,7 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "org.csr.front.spring.controller" })
+@ComponentScan(basePackages = { "org.csr.spst.front.spring.controller" })
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Bean

@@ -1,9 +1,9 @@
-package org.csr.back.model.data.dao.impl;
+package org.csr.spst.back.dao.impl;
 
 import java.util.List;
 
-import org.csr.back.model.data.dao.VilleDao;
-import org.csr.back.model.data.entity.Ville;
+import org.csr.spst.back.dao.VilleDao;
+import org.csr.spst.back.model.Ville;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

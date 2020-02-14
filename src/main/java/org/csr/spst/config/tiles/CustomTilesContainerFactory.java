@@ -1,4 +1,4 @@
-package org.csr.front.spring.config.tiles;
+package org.csr.spst.config.tiles;
 
 import org.apache.struts2.tiles.StrutsTilesContainerFactory;
 import org.apache.tiles.locale.LocaleResolver;

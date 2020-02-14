@@ -1,4 +1,4 @@
-package org.csr.front.spring.config.filter;
+package org.csr.spst.config.filter;
 
 import java.io.IOException;
 

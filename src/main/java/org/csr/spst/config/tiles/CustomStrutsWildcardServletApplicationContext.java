@@ -1,4 +1,4 @@
-package org.csr.front.spring.config.tiles;
+package org.csr.spst.config.tiles;
 
 import java.io.File;
 import java.io.IOException;

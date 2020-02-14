@@ -1,6 +1,6 @@
-package org.csr.front.spring.config.web;
+package org.csr.spst.config.web;
 
-import org.csr.front.spring.config.filter.CustomWebFilter;
+import org.csr.spst.config.filter.CustomWebFilter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

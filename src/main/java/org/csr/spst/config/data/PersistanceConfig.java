@@ -1,4 +1,4 @@
-package org.csr.front.spring.config.data;
+package org.csr.spst.config.data;
 
 import java.sql.SQLException;
 import java.util.Properties;
@@ -23,7 +23,7 @@ import oracle.jdbc.pool.OracleDataSource;
 @Configuration
 @EnableTransactionManagement
 @PropertySource({ "classpath:persistence-orcl.properties" })
-@ComponentScan({ "org.csr.back.model" })
+@ComponentScan({ "org.csr.spst.back" })
 public class PersistanceConfig {
 	
 	private Logger logger = LogManager.getLogger("SPRING_BASE_WEB_APP_LOGGER");
@@ -35,7 +35,7 @@ public class PersistanceConfig {
     public LocalSessionFactoryBean sessionFactory() throws SQLException {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[] {"org.csr.back.model"});
+        sessionFactory.setPackagesToScan(new String[] {"org.csr.spst.back"});
         sessionFactory.setHibernateProperties(hibernateProperties());
  
         return sessionFactory;
