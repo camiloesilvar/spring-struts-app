@@ -1,4 +1,4 @@
-package org.csr.front.beans;
+package org.csr.spst.front.beans;
 
 import java.io.Serializable;
 

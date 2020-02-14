@@ -1,4 +1,4 @@
-package org.csr.front.http.listener;
+package org.csr.spst.front.http.listener;
 
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionEvent;

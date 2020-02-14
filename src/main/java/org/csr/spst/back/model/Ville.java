@@ -1,4 +1,4 @@
-package org.csr.back.model.data.entity;
+package org.csr.spst.back.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

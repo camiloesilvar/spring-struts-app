@@ -1,11 +1,11 @@
-package org.csr.front.spring.controller;
+package org.csr.spst.front.spring.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 
-import org.csr.back.model.data.dao.VilleDao;
-import org.csr.front.beans.FormulaireBean;
+import org.csr.spst.back.dao.VilleDao;
+import org.csr.spst.front.beans.FormulaireBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

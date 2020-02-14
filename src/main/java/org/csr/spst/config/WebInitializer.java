@@ -1,4 +1,4 @@
-package org.csr.front.spring.config;
+package org.csr.spst.config;
 
 import java.util.EnumSet;
 
@@ -9,8 +9,8 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
 import org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter;
-import org.csr.front.spring.config.tiles.CustomTilesListener;
-import org.csr.front.spring.config.web.WebMvcConfig;
+import org.csr.spst.config.tiles.CustomTilesListener;
+import org.csr.spst.config.web.WebMvcConfig;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -22,7 +22,7 @@ public class WebInitializer implements WebApplicationInitializer {
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
         ctx.register(WebMvcConfig.class);
-        ctx.scan("org.csr.front.spring.config.data");
+        ctx.scan("org.csr.spst.config.data");
 
         /* Listeners */
         servletContext.addListener(new ContextLoaderListener(ctx));

@@ -1,4 +1,4 @@
-package org.csr.front.struts.actions;
+package org.csr.spst.front.struts.actions;
 
 import javax.servlet.http.HttpSession;
 
@@ -10,7 +10,7 @@ import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
-import org.csr.front.beans.SessionObject;
+import org.csr.spst.front.beans.SessionObject;
 
 import com.opensymphony.xwork2.ActionSupport;
 
