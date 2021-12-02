@@ -7,7 +7,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <org.apache.struts.version>2.5.20</org.apache.struts.version>
+        <org.apache.struts.version>2.5.22</org.apache.struts.version>
         <org.springframework.version>4.3.23.RELEASE</org.springframework.version>
         <org.hibernate.version>5.2.18.Final</org.hibernate.version>
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
