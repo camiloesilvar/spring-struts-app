@@ -13,5 +13,25 @@
     <definition name="/tiles/struts/straction/getaction" extends="struts.definition">
         <put-attribute name="body" value="/WEB-INF/jsp/struts_tile_page.jsp" />
     </definition>
+    
+    <definition name="/tiles/struts/straction/getFormHtmlaction" extends="struts.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/struts_form_htm_page.jsp" />
+    </definition>
+    
+    <definition name="/tiles/struts/straction/getFormStrutsaction" extends="struts.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/struts_form_str_page.jsp" />
+    </definition>
+    
+    <definition name="/tiles/struts/straction/getFormStrutsaction" extends="struts.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/struts_form_str_page.jsp" />
+    </definition>
+    
+    <definition name="/tiles/usager/formulaireusager" extends="struts.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/usager/usager.jsp" />
+    </definition>
+    
+    <definition name="/tiles/usager/listeusager" extends="struts.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/usager/listeUsager.jsp" />
+    </definition>
 
 </tiles-definitions>
