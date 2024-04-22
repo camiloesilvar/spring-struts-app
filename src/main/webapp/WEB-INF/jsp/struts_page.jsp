@@ -16,7 +16,7 @@
 
 		<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
-		<div>Pagina directa</div>
+		<div>Pagina directa Struts</div>
 		<a class="nav-link"
 			href="${contextPath}/strutsapp/strutsaction/tile/getTileAction.action">struts
 			(Tiles)</a>
