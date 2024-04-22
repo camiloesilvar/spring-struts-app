@@ -12,7 +12,6 @@ import javax.servlet.ServletRegistration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter;
-import org.csr.front.web.config.tiles.CustomTilesListener;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -37,7 +36,6 @@ public class WebInitializer implements WebApplicationInitializer {
         /* Listeners */
         logger.info("Initialization des Listeners ...");
         servletContext.addListener(new ContextLoaderListener(webContext));
-        servletContext.addListener(new CustomTilesListener());
 
         /* Filters */
         logger.info("Initialization des Filters ...");
