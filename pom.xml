@@ -11,7 +11,7 @@
         <org.springframework.version>4.3.23.RELEASE</org.springframework.version>
         <org.springframework.security.version>4.2.12.RELEASE</org.springframework.security.version>
         <org.hibernate.version>5.2.18.Final</org.hibernate.version>
-        <log4j.version>2.13.0</log4j.version>
+        <log4j.version>2.17.1</log4j.version>
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
     </properties>
 
@@ -213,7 +213,6 @@
 
 
     <build>
-        <finalName>${project.artifactId}##${maven.build.timestamp}</finalName>
         <plugins>
             <!-- Para evitar el error "web.xml is missing and <failOnMissingWebXml> is set to true" en eclipse utilizamos 
                 el siguiente plugin -->
